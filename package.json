@@ -1,0 +1,14 @@
+{
+  "name": "circles-toolbelt",
+  "version": "0.1.0",
+  "description": "Helper tools for Circles development",
+  "main": "fund-safe.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "adzialocha",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "web3": "^1.2.9"
+  }
+}
