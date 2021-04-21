@@ -31,7 +31,7 @@ async function checkSendLimit(tokenOwner, sender, receiver, plannedLimit) {
 }
 
 async function run() {
-  console.log(`CHECK TRANSFER WITH ${transfer.transferSteps.length} STEPS`);
+  console.log(`CHECK TRANSFER WITH ${transferSteps.length} STEPS`);
   for (let step of transferSteps) {
     const { limit, isValid } = await checkSendLimit(step.tokenOwnerAddress, step.from, step.to, step.value);
     console.log(`${step.from} -> ${step.to} ${isValid ? 'OK' : 'ERROR'}`);
