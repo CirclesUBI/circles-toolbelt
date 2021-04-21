@@ -9,6 +9,7 @@
   "author": "adzialocha",
   "license": "UNLICENSED",
   "dependencies": {
+    "circles-contracts": "^2.3.1",
     "web3": "^1.2.9"
   }
 }
