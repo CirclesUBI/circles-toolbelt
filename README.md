@@ -1,9 +1,14 @@
-# Circles toolbelt
+# Helper tools
 
 Helper tools for Circles development.
 
-## Usage
+This repository is a collection of different scripts / small programs which can be used to support Circles developers.
 
-```
-node ./fund-safe.js 0x405CFc20350E09d6514494934FF73dAEE3bAc461
-```
+## Overview
+
+- `helper-tools` Helper tools for Circles development
+- `trusting-multiple-accounts` Deploys an organization and automatically trusts many user accounts from a list
+
+## Development
+
+If you have anything interesting which might be useful for the future, create a new folder with the files, add a `README.md` in it to explain how to use your tools and add some notes here about it under _Overview_.
