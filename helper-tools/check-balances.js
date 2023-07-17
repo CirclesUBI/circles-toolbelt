@@ -7,6 +7,26 @@ const ETHEREUM_NODE_WS = process.env.ETHEREUM_NODE_WS || 'wss://rpc.gnosischain.
 HUB_ADDRESS = '0x29b9a7fBb8995b2423a71cC17cf9810798F6C543';
 ZERO_ADDRESS = '0x0000000000000000000000000000000000000000';
 
+// ==================================================================
+//                          DESCRIPTION
+// ==================================================================
+//
+// This scipt performs a comparison of the balance of the Circles
+// tokens of a certain account comparing the data obtained from the
+// circles subgraph and the gnosis blockscout database.
+//
+// ==================================================================
+//                             USAGE
+// ==================================================================
+//
+// $ npm install
+// $ node check-balances.js
+//
+//
+// Note: Please change the value of the `safeAddress` in the next
+// line of code depending on the account you want to analyse.
+//
+
 const safeAddress = "0x9BA1Bcd88E99d6E1E03252A70A63FEa83Bf1208c";
 
 const provider = new Web3.providers.WebsocketProvider(
@@ -46,7 +66,6 @@ async function processSubGraphData(data) {
 async function getSubgraphData() {
   console.log("\n ---------------\nGet the Subgraph data");
 
-  let balances = []
   const endpoint = 'https://api.thegraph.com/subgraphs/name/circlesubi/circles-ubi';
   const query = `{ safe(id: "${safeAddress.toLocaleLowerCase()}") { balances(first: 1000) { token { id } amount } } }`;
 
