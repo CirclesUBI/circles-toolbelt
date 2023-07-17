@@ -99,7 +99,7 @@ async function processBlockscoutData(data) {
 
 async function getBlockscoutData() {
   let data = []
-  const endpoint = 'https://gnosis.blockscout.com/api/v2/addresses/0x9BA1Bcd88E99d6E1E03252A70A63FEa83Bf1208c/tokens?type=ERC-20';
+  const endpoint = `https://gnosis.blockscout.com/api/v2/addresses/${safeAddress}/tokens?type=ERC-20`;
   const startPath = '';
   console.log("\n --------------- \nGet the Blockscout data");
 
@@ -156,7 +156,7 @@ async function run(){
   // Token owner: 0xf2C84590E1771890004D2d6947aA8F85CFaA6b87
 
   const tokenContract = new web3.eth.Contract(TokenContract.abi, difference[0])
-  const trueBalance = await tokenContract.methods.balanceOf('0x9BA1Bcd88E99d6E1E03252A70A63FEa83Bf1208c').call();
+  const trueBalance = await tokenContract.methods.balanceOf(safeAddress).call();
   console.log(`The balance of that token: ${trueBalance}`);
 
   process.exit(0)
