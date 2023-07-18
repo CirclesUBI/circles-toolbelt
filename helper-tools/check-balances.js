@@ -27,7 +27,7 @@ ZERO_ADDRESS = '0x0000000000000000000000000000000000000000';
 // line of code depending on the account you want to analyse.
 //
 
-const safeAddress = "0x9BA1Bcd88E99d6E1E03252A70A63FEa83Bf1208c";
+const safeAddress = "0x42cEDde51198D1773590311E2A340DC06B24cB37";
 
 const provider = new Web3.providers.WebsocketProvider(
   ETHEREUM_NODE_WS,
@@ -171,12 +171,12 @@ async function run(){
   let difference2 = dataBlockscoutTokens.filter(x => !dataSubgraphTokens.includes(x));
   console.log(`Number of tokens from the blockscout dataset that are NOT in the subgraph dataset: ${difference2.length}`);
 
-  console.log(`\n --------------- \nToken that is not in the Blockscout dataset: ${difference}`); // 0x07ebeea7f9cb7c4f0e6dfc8c719ca9e43196b6f1
-  // Token owner: 0xf2C84590E1771890004D2d6947aA8F85CFaA6b87
-
-  const tokenContract = new web3.eth.Contract(TokenContract.abi, difference[0])
-  const trueBalance = await tokenContract.methods.balanceOf(safeAddress).call();
-  console.log(`The balance of that token: ${trueBalance}`);
+  console.log(`\n --------------- \nTokens that are not in the Blockscout dataset:`);
+  for (i in difference) {
+    const tokenContract = new web3.eth.Contract(TokenContract.abi, difference[i])
+    const trueBalance = await tokenContract.methods.balanceOf(safeAddress).call();
+    console.log(`* Token ${difference[i]}, which has a balance of ${trueBalance}`);
+  }
 
   process.exit(0)
 }
