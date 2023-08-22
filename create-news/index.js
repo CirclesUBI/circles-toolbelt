@@ -49,4 +49,3 @@ inquirer
     console.log('Error', error)
   });
 
-  sequelize.close()
