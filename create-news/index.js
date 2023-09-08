@@ -1,7 +1,7 @@
+process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
 
 const inquirer = require('inquirer');
 const { News, close } = require('./models/news');
-
 
 inquirer.registerPrompt('datepicker', require('inquirer-datepicker'));
 
