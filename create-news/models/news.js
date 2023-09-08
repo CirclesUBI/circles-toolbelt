@@ -32,4 +32,4 @@ const News = db.define('news', {
   },
 });
 
-module.exports = { News }
+module.exports = { News, close: () => db.close() }
