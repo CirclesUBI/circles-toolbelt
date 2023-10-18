@@ -1,4 +1,6 @@
+*.crt
 node_modules
+.env
 org-safe-owner-private-key.txt
 config.json
 keys.json

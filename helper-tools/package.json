@@ -4,12 +4,17 @@
   "description": "Helper tools for Circles development",
   "main": "fund-safe.js",
   "scripts": {
+    "trust-safe": "node trust-safe.js --",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "adzialocha",
   "license": "UNLICENSED",
   "dependencies": {
+    "@circles/core": "5.1.0-beta-not-use",
     "circles-contracts": "^2.3.1",
+    "dotenv": "16.3.1",
+    "ethers": "5.7.2",
+    "truffle": "5.11.5",
     "web3": "^1.2.9"
   }
 }
