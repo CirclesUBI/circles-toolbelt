@@ -10,7 +10,7 @@
   "author": "adzialocha",
   "license": "UNLICENSED",
   "dependencies": {
-    "@circles/core": "5.1.0-beta-not-use",
+    "@circles/core": "5.2.0-beta-not-use",
     "circles-contracts": "^2.3.1",
     "dotenv": "16.3.1",
     "ethers": "5.7.2",
