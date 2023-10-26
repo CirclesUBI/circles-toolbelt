@@ -1,4 +1,4 @@
-// WARNING: This script is meant to be executed only for LOCAL!!!
+// WARNING: This script is meant to be executed only for GANACHE!!!
 require('dotenv').config();
 
 const CirclesCore = require('@circles/core');
