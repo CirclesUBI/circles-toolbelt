@@ -69,4 +69,4 @@ async function onboardAccountManually({ account, nonce }) {
       }),
     ),
   )).then(() => console.log('Safe address trusted succesfully!'));
-})()
+})();
